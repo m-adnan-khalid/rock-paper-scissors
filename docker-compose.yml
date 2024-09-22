@@ -1,0 +1,25 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: rpsgame
+
+  keydb:
+    image: eqalpha/keydb
+    container_name: keydb
+    ports:
+      - "6379:6379"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Points to your Dockerfile
+    container_name: rpsgame-app
+    ports:
+      - "8585:8585"
+    depends_on:
+      - mongo
+      - keydb

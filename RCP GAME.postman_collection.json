@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "1a8bbeab-b823-41ec-af82-b0f25e53fdc1",
+		"name": "RCP GAME",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30181132"
+	},
+	"item": [
+		{
+			"name": "create player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8585/api/v1/players?username=hello1&email=andnan123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"players"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "hello1"
+						},
+						{
+							"key": "email",
+							"value": "andnan123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8585/api/v1/players/start?username=hello1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"players",
+						"start"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "hello1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make Move",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8585/api/v1/players/66f0097510a1221de2644afd/move?playerMove=paper",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"players",
+						"66f0097510a1221de2644afd",
+						"move"
+					],
+					"query": [
+						{
+							"key": "playerMove",
+							"value": "paper"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8585/api/v1/players/66eff33047726312673d20281/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"players",
+						"66eff33047726312673d20281",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8585/api/v1/players/66f0097510a1221de2644afd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"players",
+						"66f0097510a1221de2644afd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
